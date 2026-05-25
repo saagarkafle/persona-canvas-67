@@ -1,0 +1,1 @@
+import{t as e}from"./index-D5rA6eud.js";var t=e();function n(){return(0,t.jsx)(`div`,{className:`p-2`,children:(0,t.jsx)(`h3`,{children:`Welcome to my photography page!`})})}export{n as component};
