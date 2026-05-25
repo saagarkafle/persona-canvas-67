@@ -1,11 +1,11 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
-  Outlet,
-  Link,
-  createRootRouteWithContext,
-  useRouter,
-  HeadContent,
-  Scripts,
+    HeadContent,
+    Link,
+    Outlet,
+    Scripts,
+    createRootRouteWithContext,
+    useRouter,
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
@@ -123,6 +123,14 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <nav className="flex justify-center gap-4 p-4">
+        <Link to="/" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
+          Home
+        </Link>
+        <Link to="/photography" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
+          Photography
+        </Link>
+      </nav>
       <Outlet />
     </QueryClientProvider>
   );
