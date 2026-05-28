@@ -1,13 +1,14 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
-    HeadContent,
-    Link,
-    Outlet,
-    Scripts,
-    createRootRouteWithContext,
-    useRouter,
+  HeadContent,
+  Link,
+  Outlet,
+  Scripts,
+  createRootRouteWithContext,
+  useRouter,
 } from "@tanstack/react-router";
 
+import appCssText from "../styles.css?raw";
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
@@ -109,6 +110,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        <style dangerouslySetInnerHTML={{ __html: appCssText }} />
       </head>
       <body>
         {children}
