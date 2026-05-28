@@ -5,5 +5,7 @@
 // a plain static bundle suitable for Cloudflare Pages.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-export default defineConfig({});
+export default defineConfig({
+  cloudflare: false,
+});
 
