@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "postbuild": "if [ -f dist/client/index.html ]; then cp dist/client/index.html dist/client/404.html; fi",
+    "postbuild": "if [ -f dist/client/index.html ]; then cp dist/client/index.html dist/client/404.html; fi && cp dist/server/server.js dist/client/_worker.js && rm -f dist/client/wrangler.json",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
