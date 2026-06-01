@@ -20,6 +20,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    outDir: "dist/client",
+  },
   server: {
     host: "::",
     port: 8080,
