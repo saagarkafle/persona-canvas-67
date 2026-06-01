@@ -1,14 +1,10 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
-    HeadContent,
     Link,
     Outlet,
-    Scripts,
     createRootRouteWithContext,
     useRouter,
 } from "@tanstack/react-router";
-
-import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
@@ -68,55 +64,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sagar Kafle — Builder, Developer, Digital Strategist" },
-      {
-        name: "description",
-        content:
-          "Sagar Kafle is a builder, developer, and digital strategist creating impactful experiences on the web.",
-      },
-      { name: "author", content: "Sagar Kafle" },
-      { property: "og:title", content: "Sagar Kafle — Builder, Developer, Digital Strategist" },
-      {
-        property: "og:description",
-        content:
-          "Builder, developer, and digital strategist creating impactful experiences on the web.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap",
-      },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
