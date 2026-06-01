@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import profileImg from "@/assets/profile.jpg";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
@@ -6,6 +5,7 @@ import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 import project5 from "@/assets/project-5.jpg";
 import project6 from "@/assets/project-6.jpg";
+import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -210,16 +210,14 @@ function Hero() {
         <div className="flex flex-col items-end gap-12 md:flex-row">
           <div className="flex-1 animate-fade-up">
             <div className="mb-4 text-mono text-sm uppercase tracking-tight text-accent">
-              Founder · Engineer · Strategist
+              Developer · Engineer · Photographer
             </div>
             <h1 className="mb-8 text-balance text-5xl font-extrabold leading-[0.9] tracking-tighter md:text-7xl lg:text-8xl">
               Hi, I'm <span className="text-accent">Sagar Kafle</span>
               <span className="text-mono animate-blink text-accent">_</span>
             </h1>
             <p className="mb-10 max-w-[55ch] text-pretty text-lg text-muted-foreground">
-              Builder, developer, and digital strategist creating impactful experiences on the web.
-              I work at the intersection of engineering, product, and brand — translating ambitious
-              ideas into precisely machined software.
+              Building digital products, solving complex problems, and capturing stories through the lens. I combine technology, design, and creativity to create experiences that are intuitive, purposeful, and visually engaging.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -249,8 +247,8 @@ function Hero() {
                 <div className="flex items-center gap-3">
                   <span className="h-2 w-2 rounded-full bg-accent animate-pulse-dot" />
                   <div className="text-mono text-[10px] uppercase tracking-widest">
-                    <span className="text-muted-foreground">Status / </span>
-                    <span className="text-accent">Open to ventures</span>
+                    {/* <span className="text-muted-foreground">Status / </span> */}
+                    <span className="text-accent">Open to work</span>
                   </div>
                 </div>
               </div>
