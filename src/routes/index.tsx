@@ -168,12 +168,7 @@ const POSTS = [
   },
 ];
 
-const STATS = [
-  { value: "40+", label: "Projects shipped" },
-  { value: "12", label: "Countries served" },
-  { value: "6+", label: "Years building" },
-  { value: "99.9%", label: "Uptime delivered" },
-];
+
 
 function Nav() {
   return (
@@ -285,23 +280,7 @@ function About() {
             </p>
           </div>
         </div>
-        <div>
-          <h2 className="mb-8 text-mono text-xs uppercase tracking-widest text-muted-foreground">
-            By the numbers
-          </h2>
-          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border">
-            {STATS.map((s) => (
-              <div key={s.label} className="flex flex-col gap-2 bg-background p-6">
-                <span className="text-3xl font-extrabold tracking-tighter text-accent">
-                  {s.value}
-                </span>
-                <span className="text-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                  {s.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
+
       </div>
     </section>
   );
