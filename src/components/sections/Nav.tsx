@@ -25,7 +25,7 @@ export function Nav() {
           href="#contact"
           className="text-sm text-muted-foreground transition-colors hover:text-foreground md:hidden"
         >
-          Say hi
+          Contact
         </a>
       </div>
     </nav>

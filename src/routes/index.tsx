@@ -3,30 +3,30 @@ import { createFileRoute } from "@tanstack/react-router";
 import { About } from "@/components/sections/About";
 import { Blog } from "@/components/sections/Blog";
 import { Contact } from "@/components/sections/Contact";
+import { Education } from "@/components/sections/Education";
 import { Experience } from "@/components/sections/Experience";
 import { Footer } from "@/components/sections/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Nav } from "@/components/sections/Nav";
 import { Projects } from "@/components/sections/Projects";
-import { Testimonials } from "@/components/sections/Testimonials";
 
-export const Route = createFileRoute("/")(({
+export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Sagar Kafle — Developer & Maker" },
+      { title: "Sagar Kafle — Software Engineer" },
       {
         name: "description",
         content:
-          "Sagar Kafle — a developer from Nepal who builds digital products, writes code, and takes photos.",
+          "Sagar Kafle — Software Engineer. MSc Artificial Intelligence and Data Science graduate from Edinburgh Napier University with 2+ years experience in Flutter, mobile engineering, and applied AI.",
       },
-      { property: "og:title", content: "Sagar Kafle — Developer & Maker" },
+      { property: "og:title", content: "Sagar Kafle — Software Engineer" },
       {
         property: "og:description",
         content:
-          "A developer from Nepal who builds digital products, writes code, and takes photos.",
+          "Software Engineer. MSc Artificial Intelligence and Data Science graduate from Edinburgh Napier University with 2+ years experience in Flutter, mobile engineering, and applied AI.",
       },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://sagar-kafle.com.np" },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [
@@ -36,13 +36,19 @@ export const Route = createFileRoute("/")(({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Sagar Kafle",
-          jobTitle: "Software Developer",
+          jobTitle: "Software Engineer",
+          alumniOf: "Edinburgh Napier University",
           url: "https://sagar-kafle.com.np",
+          sameAs: [
+            "https://www.linkedin.com/in/sagar-kafle-a1b84b185/",
+            "https://github.com/saagarkafle",
+            "https://medium.com/@kafleysaagar",
+          ],
         }),
       },
     ],
   }),
-}));
+});
 
 function Index() {
   return (
@@ -51,9 +57,9 @@ function Index() {
       <main>
         <Hero />
         <About />
-        <Projects />
         <Experience />
-        <Testimonials />
+        <Education />
+        <Projects />
         <Blog />
         <Contact />
       </main>

@@ -1,44 +1,64 @@
 import { POSTS } from "@/data";
 
 const CAT_COLORS: Record<string, string> = {
+  Performance: "bg-blue-100 text-blue-700",
+  Payments: "bg-violet-100 text-violet-700",
+  Flutter: "bg-teal-100 text-teal-700",
   AI: "bg-purple-100 text-purple-700",
-  Product: "bg-amber-100 text-amber-700",
-  Engineering: "bg-blue-100 text-blue-700",
 };
 
 export function Blog() {
   return (
-    <section id="writing" className="section-padding bg-secondary/50">
+    <section id="articles" className="section-padding bg-secondary/30">
       <div className="mx-auto max-w-5xl">
-        <h2 className="mb-4 text-3xl md:text-4xl">Writing</h2>
-        <p className="mb-12 text-muted-foreground">
-          Thoughts on building software, running a business, and everything in between.
-        </p>
+        <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end mb-10">
+          <div>
+            <h2 className="text-3xl md:text-4xl mb-2">Technical Articles</h2>
+            <p className="text-muted-foreground">
+              Deep dives and practical guides on mobile engineering, optimization, and payment systems.
+            </p>
+          </div>
+          <a
+            href="https://medium.com/@kafleysaagar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:underline shrink-0"
+          >
+            Read on Medium ↗
+          </a>
+        </div>
 
-        <div className="space-y-0 divide-y divide-border">
+        <div className="grid gap-6 md:grid-cols-2">
           {POSTS.map((p) => (
-            <article
+            <a
               key={p.title}
-              className="group flex flex-col gap-2 py-8 first:pt-0 last:pb-0 cursor-pointer transition-opacity hover:opacity-75"
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col justify-between rounded-xl border border-border bg-card p-6 transition-all hover:border-accent hover:shadow-md"
             >
-              <div className="flex items-center gap-3 text-xs">
-                <span className="text-muted-foreground">{p.date}</span>
-                <span
-                  className={`rounded-full px-2.5 py-0.5 font-medium ${CAT_COLORS[p.cat] || "bg-secondary text-muted-foreground"}`}
+              <div>
+                <div className="mb-3 flex items-center justify-between text-xs">
+                  <span
+                    className={`rounded-full px-2.5 py-0.5 font-medium ${CAT_COLORS[p.cat] || "bg-secondary text-muted-foreground"}`}
+                  >
+                    {p.cat}
+                  </span>
+                  <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                    {p.platform}
+                  </span>
+                </div>
+                <h3
+                  className="mb-2 text-lg font-semibold text-foreground group-hover:text-accent transition-colors"
+                  style={{ fontFamily: "var(--font-sans)" }}
                 >
-                  {p.cat}
-                </span>
+                  {p.title} <span className="inline-block transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {p.desc}
+                </p>
               </div>
-              <h3
-                className="text-xl font-semibold text-foreground"
-                style={{ fontFamily: "var(--font-sans)" }}
-              >
-                {p.title}
-              </h3>
-              <p className="max-w-[55ch] text-sm text-muted-foreground">
-                {p.desc}
-              </p>
-            </article>
+            </a>
           ))}
         </div>
       </div>

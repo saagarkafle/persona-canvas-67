@@ -1,33 +1,41 @@
 import { PROJECTS } from "@/data";
 
 const TAG_COLORS: Record<string, string> = {
-  TypeScript: "bg-blue-100 text-blue-700",
-  AWS: "bg-amber-100 text-amber-700",
-  Rust: "bg-orange-100 text-orange-700",
-  Wasm: "bg-purple-100 text-purple-700",
-  Python: "bg-emerald-100 text-emerald-700",
-  PyTorch: "bg-red-100 text-red-700",
-  "Next.js": "bg-slate-200 text-slate-700",
+  Flutter: "bg-blue-100 text-blue-700",
+  BLoC: "bg-indigo-100 text-indigo-700",
+  Firebase: "bg-amber-100 text-amber-700",
   Stripe: "bg-violet-100 text-violet-700",
-  Go: "bg-cyan-100 text-cyan-700",
-  Redis: "bg-rose-100 text-rose-700",
-  Zigbee: "bg-teal-100 text-teal-700",
-  "Node.js": "bg-lime-100 text-lime-700",
+  Python: "bg-emerald-100 text-emerald-700",
+  RAG: "bg-purple-100 text-purple-700",
+  LLMs: "bg-rose-100 text-rose-700",
+  Pinecone: "bg-teal-100 text-teal-700",
+  Streamlit: "bg-red-100 text-red-700",
+  Dart: "bg-cyan-100 text-cyan-700",
+  Riverpod: "bg-sky-100 text-sky-700",
+  Hive: "bg-orange-100 text-orange-700",
+  "REST APIs": "bg-fuchsia-100 text-fuchsia-700",
+  iOS: "bg-slate-200 text-slate-700",
+  Android: "bg-lime-100 text-lime-700",
+  DevTools: "bg-yellow-100 text-yellow-800",
+  "Push Notifications": "bg-pink-100 text-pink-700",
 };
 
 export function Projects() {
   return (
-    <section id="work" className="section-padding">
+    <section id="projects" className="section-padding">
       <div className="mx-auto max-w-5xl">
-        <h2 className="mb-4 text-3xl md:text-4xl">Things I've built</h2>
-        <p className="mb-12 max-w-[50ch] text-muted-foreground">
-          A mix of client work and personal projects. Some shipped, some still evolving.
+        <h2 className="mb-4 text-3xl md:text-4xl">Featured Projects</h2>
+        <p className="mb-12 max-w-[54ch] text-muted-foreground">
+          Academic AI dissertation and production mobile applications engineered across Flutter, Android, and AI/ML architectures.
         </p>
 
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map((p) => (
-            <article key={p.title} className="group">
-              <div className="mb-4 overflow-hidden rounded-xl">
+            <article
+              key={p.title}
+              className="group flex flex-col rounded-xl border border-border bg-card p-4 transition-all hover:border-accent hover:shadow-md"
+            >
+              <div className="mb-4 overflow-hidden rounded-lg">
                 <img
                   src={p.img}
                   alt={p.title}
@@ -38,19 +46,19 @@ export function Projects() {
                 />
               </div>
               <h3
-                className="mb-2 text-lg font-semibold"
+                className="mb-2 text-base font-semibold text-foreground"
                 style={{ fontFamily: "var(--font-sans)" }}
               >
                 {p.title}
               </h3>
-              <p className="mb-3 text-sm text-muted-foreground leading-relaxed">
+              <p className="mb-4 flex-1 text-xs text-muted-foreground leading-relaxed">
                 {p.desc}
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5 pt-2 border-t border-border/50">
                 {p.tags.map((t) => (
                   <span
                     key={t}
-                    className={`rounded-full px-3 py-1 text-xs font-medium ${TAG_COLORS[t] || "bg-secondary text-muted-foreground"}`}
+                    className={`rounded-full px-2.5 py-0.5 text-[11px] font-medium ${TAG_COLORS[t] || "bg-secondary text-muted-foreground"}`}
                   >
                     {t}
                   </span>
