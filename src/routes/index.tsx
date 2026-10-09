@@ -8,23 +8,24 @@ import { Experience } from "@/components/sections/Experience";
 import { Footer } from "@/components/sections/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Nav } from "@/components/sections/Nav";
+import { Photography } from "@/components/sections/Photography";
 import { Projects } from "@/components/sections/Projects";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Sagar Kafle — Software Engineer" },
+      { title: "Sagar Kafle — Software Engineer & Photographer" },
       {
         name: "description",
         content:
-          "Sagar Kafle — Software Engineer. MSc Artificial Intelligence and Data Science graduate from Edinburgh Napier University with 2+ years experience in Flutter, mobile engineering, and applied AI.",
+          "Sagar Kafle — Software Engineer and Photographer. MSc Artificial Intelligence and Data Science graduate from Edinburgh Napier University with 2+ years experience in Flutter, mobile engineering, and applied AI.",
       },
-      { property: "og:title", content: "Sagar Kafle — Software Engineer" },
+      { property: "og:title", content: "Sagar Kafle — Software Engineer & Photographer" },
       {
         property: "og:description",
         content:
-          "Software Engineer. MSc Artificial Intelligence and Data Science graduate from Edinburgh Napier University with 2+ years experience in Flutter, mobile engineering, and applied AI.",
+          "Software Engineer and Photographer. MSc Artificial Intelligence and Data Science graduate from Edinburgh Napier University with 2+ years experience in Flutter, mobile engineering, and applied AI.",
       },
       { property: "og:url", content: "https://sagar-kafle.com.np" },
     ],
@@ -61,6 +62,7 @@ function Index() {
         <Education />
         <Projects />
         <Blog />
+        <Photography />
         <Contact />
       </main>
       <Footer />

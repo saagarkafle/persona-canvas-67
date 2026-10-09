@@ -4,6 +4,9 @@ import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 import project5 from "@/assets/project-5.jpg";
 import project6 from "@/assets/project-6.jpg";
+import photoHighlands from "@/assets/photo-highlands.jpg";
+import photoEdinburgh from "@/assets/photo-edinburgh.jpg";
+import photoHimalayas from "@/assets/photo-himalayas.jpg";
 
 export const SECTION_LINKS = [
   { href: "#about", label: "About" },
@@ -11,6 +14,7 @@ export const SECTION_LINKS = [
   { href: "#education", label: "Education" },
   { href: "#projects", label: "Projects" },
   { href: "#articles", label: "Articles" },
+  { href: "#photography", label: "Photography" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -134,6 +138,78 @@ export const POSTS = [
     url: "https://medium.com/@kafleysaagar/stripe-integration-in-flutter-ebfc87ba02ea",
     cat: "Payments",
     desc: "Step-by-step implementation guide for secure mobile checkout flows with the Stripe Payment Sheet SDK, handling webhook events, and Android configurations.",
+  },
+];
+
+export interface Photograph {
+  id: string;
+  title: string;
+  location: string;
+  year: string;
+  camera: string;
+  image: string;
+  caption: string;
+  story?: {
+    title: string;
+    readTime: string;
+    paragraphs: string[];
+  };
+}
+
+export const PHOTOGRAPHS: Photograph[] = [
+  {
+    id: "glen-coe",
+    title: "Golden Hour over Glen Coe",
+    location: "Scottish Highlands",
+    year: "2024",
+    camera: "35mm • ISO 100 • f/4.0",
+    image: photoHighlands,
+    caption: "Sunlight piercing through cloud breaks above winding waters in the Scottish Highlands.",
+    story: {
+      title: "Chasing the Breaking Light in Glen Coe",
+      readTime: "2 min read",
+      paragraphs: [
+        "We drove into the valley under hours of heavy, relentless Scottish mist. Just as the afternoon was fading, the low northern sun fractured through the cloud cover, casting an amber glow down the slopes into the loch.",
+        "Photography teaches patience the same way software architecture does: you can prepare your composition and tools in advance, but you have to stay alert and ready for the exact fleeting moment when the components align.",
+        "This frame captured that rare five-minute window before the twilight chill pulled the valley back into shadow."
+      ],
+    },
+  },
+  {
+    id: "edinburgh-old-town",
+    title: "Cobblestone Reflections",
+    location: "Victoria Street, Edinburgh",
+    year: "2024",
+    camera: "28mm • ISO 800 • f/2.0",
+    image: photoEdinburgh,
+    caption: "A wet dusk reflecting golden streetlights along the historic curves of the Old Town.",
+    story: {
+      title: "Evenings in the City of Stone",
+      readTime: "2 min read",
+      paragraphs: [
+        "Edinburgh after an evening rain has an intimacy that dry daylight never reveals. The sandstone buildings drink in the streetlamp glow, and the wet cobblestones turn into mirrors reflecting passersby with umbrellas.",
+        "Walking these streets during my Master's studies was often my way to step away from code and research papers, clearing my head by observing the rhythm of everyday life.",
+        "There's something deeply grounding about watching centuries-old architecture stand unhurried amid the rush of modern life."
+      ],
+    },
+  },
+  {
+    id: "himalayan-ridge",
+    title: "Prayer Flags in Alpine Silence",
+    location: "High Himalaya, Nepal",
+    year: "2023",
+    camera: "50mm • ISO 100 • f/5.6",
+    image: photoHimalayas,
+    caption: "Wind-whipped prayer flags sending quiet blessings into the thin morning air across snowbound summits.",
+    story: {
+      title: "Wind, Sky, and High Ridges",
+      readTime: "3 min read",
+      paragraphs: [
+        "Standing at 5,000 meters just after sunrise, the silence is unlike anything found at lower altitudes. The only sound is the rhythmic flutter of prayer flags carrying goodwill on the high mountain wind.",
+        "The light here feels unmediated — crisp, sharp, and revealing every crevasse in the rock. Having grown up connected to Nepal, returning to these trails always reconnects me with what truly matters: humility, scale, and quiet persistence.",
+        "No lens ever quite captures the vastness of these summits, but this shot is as close as I could get to remembering that still morning."
+      ],
+    },
   },
 ];
 

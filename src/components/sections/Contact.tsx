@@ -4,7 +4,7 @@ export function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" className="section-padding bg-secondary/30">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="mb-4 text-3xl md:text-4xl">Let's connect</h2>
         <p className="mb-10 text-muted-foreground">
