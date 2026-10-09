@@ -1,5 +1,20 @@
 import { PROJECTS } from "@/data";
 
+const TAG_COLORS: Record<string, string> = {
+  TypeScript: "bg-blue-100 text-blue-700",
+  AWS: "bg-amber-100 text-amber-700",
+  Rust: "bg-orange-100 text-orange-700",
+  Wasm: "bg-purple-100 text-purple-700",
+  Python: "bg-emerald-100 text-emerald-700",
+  PyTorch: "bg-red-100 text-red-700",
+  "Next.js": "bg-slate-200 text-slate-700",
+  Stripe: "bg-violet-100 text-violet-700",
+  Go: "bg-cyan-100 text-cyan-700",
+  Redis: "bg-rose-100 text-rose-700",
+  Zigbee: "bg-teal-100 text-teal-700",
+  "Node.js": "bg-lime-100 text-lime-700",
+};
+
 export function Projects() {
   return (
     <section id="work" className="section-padding">
@@ -35,7 +50,7 @@ export function Projects() {
                 {p.tags.map((t) => (
                   <span
                     key={t}
-                    className="rounded-md bg-secondary px-2.5 py-1 text-xs font-medium text-muted-foreground"
+                    className={`rounded-full px-3 py-1 text-xs font-medium ${TAG_COLORS[t] || "bg-secondary text-muted-foreground"}`}
                   >
                     {t}
                   </span>

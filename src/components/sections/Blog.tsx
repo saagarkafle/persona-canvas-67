@@ -1,5 +1,11 @@
 import { POSTS } from "@/data";
 
+const CAT_COLORS: Record<string, string> = {
+  AI: "bg-purple-100 text-purple-700",
+  Product: "bg-amber-100 text-amber-700",
+  Engineering: "bg-blue-100 text-blue-700",
+};
+
 export function Blog() {
   return (
     <section id="writing" className="section-padding bg-secondary/50">
@@ -15,10 +21,13 @@ export function Blog() {
               key={p.title}
               className="group flex flex-col gap-2 py-8 first:pt-0 last:pb-0 cursor-pointer transition-opacity hover:opacity-75"
             >
-              <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                <span>{p.date}</span>
-                <span className="h-1 w-1 rounded-full bg-accent" />
-                <span>{p.cat}</span>
+              <div className="flex items-center gap-3 text-xs">
+                <span className="text-muted-foreground">{p.date}</span>
+                <span
+                  className={`rounded-full px-2.5 py-0.5 font-medium ${CAT_COLORS[p.cat] || "bg-secondary text-muted-foreground"}`}
+                >
+                  {p.cat}
+                </span>
               </div>
               <h3
                 className="text-xl font-semibold text-foreground"

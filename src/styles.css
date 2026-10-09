@@ -41,26 +41,26 @@
 :root {
   --radius: 0.625rem;
 
-  /* Warm editorial palette */
-  --background: #FDFBF7;
-  --foreground: #1a1714;
-  --card: #F7F3ED;
-  --card-foreground: #1a1714;
-  --popover: #F7F3ED;
-  --popover-foreground: #1a1714;
-  --primary: #1a1714;
-  --primary-foreground: #FDFBF7;
-  --secondary: #F0EBE3;
-  --secondary-foreground: #1a1714;
-  --muted: #F0EBE3;
-  --muted-foreground: #78716C;
-  --accent: #B85C38;
-  --accent-foreground: #FDFBF7;
+  /* Colorful palette — teal + coral */
+  --background: #E0EFED;
+  --foreground: #1B2D36;
+  --card: #D0E4E0;
+  --card-foreground: #1B2D36;
+  --popover: #D0E4E0;
+  --popover-foreground: #1B2D36;
+  --primary: #1B2D36;
+  --primary-foreground: #E0EFED;
+  --secondary: #C3DCD7;
+  --secondary-foreground: #1B2D36;
+  --muted: #C3DCD7;
+  --muted-foreground: #4A6670;
+  --accent: #E0734A;
+  --accent-foreground: #FFFFFF;
   --destructive: #dc2626;
-  --destructive-foreground: #FDFBF7;
-  --border: #E7E0D6;
-  --input: #E7E0D6;
-  --ring: #B85C38;
+  --destructive-foreground: #FFFFFF;
+  --border: #A8CFC7;
+  --input: #A8CFC7;
+  --ring: #E0734A;
 }
 
 @keyframes fade-in {
@@ -97,8 +97,8 @@
   }
 
   ::selection {
-    background: rgba(184, 92, 56, 0.15);
-    color: #1a1714;
+    background: rgba(224, 115, 74, 0.25);
+    color: #1B2D36;
   }
 
   h1, h2, h3 {
