@@ -1,64 +1,65 @@
 export function Contact() {
   return (
-    <section id="contact" className="px-6 py-24">
-      <div
-        className="mx-auto max-w-4xl rounded-lg border border-accent/20 glass-panel p-8 md:p-12"
-        style={{ backgroundImage: "var(--gradient-radial)" }}
-      >
-        <div className="mb-10 text-center">
-          <div className="text-mono mb-4 text-xs uppercase tracking-widest text-accent">
-            04. Connect
-          </div>
-          <h2 className="mb-6 text-balance text-4xl font-extrabold tracking-tighter md:text-5xl">
-            Let's build something meaningful together.
-          </h2>
-          <p className="mx-auto max-w-[50ch] text-muted-foreground">
-            Currently open to strategic partnerships, freelance engagements, and high-impact
-            engineering leadership roles.
-          </p>
-        </div>
+    <section id="contact" className="section-padding">
+      <div className="mx-auto max-w-2xl text-center">
+        <h2 className="mb-4 text-3xl md:text-4xl">Let's talk</h2>
+        <p className="mb-10 text-muted-foreground">
+          Have a project in mind, want to collaborate, or just want to say hello?
+          I'd love to hear from you.
+        </p>
 
         <form
-          className="grid gap-4 md:grid-cols-2"
+          className="mx-auto max-w-md space-y-4 text-left"
           onSubmit={(e) => {
             e.preventDefault();
           }}
         >
           <input
             type="text"
-            placeholder="Name"
-            className="text-mono rounded-sm border border-border bg-background px-4 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-accent"
+            name="name"
+            placeholder="Your name"
+            autoComplete="name"
+            className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-accent focus:ring-1 focus:ring-accent/20 transition-colors"
           />
           <input
             type="email"
-            placeholder="Email"
-            className="text-mono rounded-sm border border-border bg-background px-4 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-accent"
+            name="email"
+            placeholder="Your email"
+            autoComplete="email"
+            className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-accent focus:ring-1 focus:ring-accent/20 transition-colors"
           />
           <textarea
+            name="message"
             rows={4}
-            placeholder="Tell me about your project…"
-            className="text-mono md:col-span-2 resize-none rounded-sm border border-border bg-background px-4 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-accent"
+            placeholder="What's on your mind?"
+            className="w-full resize-none rounded-lg border border-border bg-card px-4 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-accent focus:ring-1 focus:ring-accent/20 transition-colors"
           />
           <button
             type="submit"
-            className="text-mono md:col-span-2 rounded-sm bg-accent px-8 py-4 text-sm font-bold uppercase tracking-widest text-accent-foreground transition-all hover:brightness-110"
+            className="w-full rounded-lg bg-foreground px-6 py-3 text-sm font-medium text-background transition-opacity hover:opacity-85"
           >
-            Send Transmission →
+            Send message
           </button>
         </form>
 
-        <div className="text-mono mt-10 flex flex-wrap items-center justify-center gap-6 border-t border-border pt-8 text-xs uppercase tracking-widest">
-          <a href="mailto:hello@sagar-kafle.com.np" className="text-accent hover:underline">
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+          <a
+            href="mailto:hello@sagar-kafle.com.np"
+            className="transition-colors hover:text-foreground"
+          >
             hello@sagar-kafle.com.np
           </a>
-          <a href="#" className="text-muted-foreground hover:text-accent">
+          <span className="hidden h-1 w-1 rounded-full bg-border sm:block" />
+          <a href="#" className="transition-colors hover:text-foreground">
             LinkedIn
           </a>
-          <a href="#" className="text-muted-foreground hover:text-accent">
+          <span className="hidden h-1 w-1 rounded-full bg-border sm:block" />
+          <a href="#" className="transition-colors hover:text-foreground">
             GitHub
           </a>
-          <a href="#" className="text-muted-foreground hover:text-accent">
-            Twitter / X
+          <span className="hidden h-1 w-1 rounded-full bg-border sm:block" />
+          <a href="#" className="transition-colors hover:text-foreground">
+            Twitter
           </a>
         </div>
       </div>

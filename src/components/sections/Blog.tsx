@@ -2,36 +2,34 @@ import { POSTS } from "@/data";
 
 export function Blog() {
   return (
-    <section id="blog" className="px-6 py-24">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-12 flex items-end justify-between">
-          <h2 className="text-3xl font-extrabold tracking-tighter">Insights & Logic</h2>
-          <a
-            href="#"
-            className="text-mono text-[10px] uppercase tracking-widest text-muted-foreground hover:text-accent"
-          >
-            All writing ↗
-          </a>
-        </div>
-        <div className="grid gap-px overflow-hidden border-y border-border bg-border md:grid-cols-3">
+    <section id="writing" className="section-padding bg-secondary/50">
+      <div className="mx-auto max-w-5xl">
+        <h2 className="mb-4 text-3xl md:text-4xl">Writing</h2>
+        <p className="mb-12 text-muted-foreground">
+          Thoughts on building software, running a business, and everything in between.
+        </p>
+
+        <div className="space-y-0 divide-y divide-border">
           {POSTS.map((p) => (
-            <a
+            <article
               key={p.title}
-              href="#"
-              className="group flex flex-col gap-4 bg-background p-8 transition-colors hover:bg-secondary"
+              className="group flex flex-col gap-2 py-8 first:pt-0 last:pb-0 cursor-pointer transition-opacity hover:opacity-75"
             >
-              <div className="text-mono flex items-center justify-between text-[10px] uppercase tracking-widest text-muted-foreground">
+              <div className="flex items-center gap-3 text-xs text-muted-foreground">
                 <span>{p.date}</span>
-                <span className="text-accent">{p.cat}</span>
+                <span className="h-1 w-1 rounded-full bg-accent" />
+                <span>{p.cat}</span>
               </div>
-              <h3 className="text-xl font-bold transition-colors group-hover:text-accent">
+              <h3
+                className="text-xl font-semibold text-foreground"
+                style={{ fontFamily: "var(--font-sans)" }}
+              >
                 {p.title}
               </h3>
-              <p className="text-sm text-muted-foreground">{p.desc}</p>
-              <span className="text-mono mt-auto text-[10px] uppercase tracking-widest text-accent">
-                Read →
-              </span>
-            </a>
+              <p className="max-w-[55ch] text-sm text-muted-foreground">
+                {p.desc}
+              </p>
+            </article>
           ))}
         </div>
       </div>

@@ -6,58 +6,54 @@ import project5 from "@/assets/project-5.jpg";
 import project6 from "@/assets/project-6.jpg";
 
 export const SECTION_LINKS = [
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "History" },
-  { href: "#blog", label: "Insights" },
-  { href: "#contact", label: "Connect" },
+  { href: "#work", label: "Work" },
+  { href: "#about", label: "About" },
+  { href: "#writing", label: "Writing" },
+  { href: "#contact", label: "Say hi" },
 ];
 
 export const SKILL_CATEGORIES = [
-  { n: "01", title: "Frontend Engineering", desc: "React, Next.js, TypeScript, Tailwind, Framer Motion." },
-  { n: "02", title: "Backend Engineering", desc: "Node, Go, PostgreSQL, edge runtimes, event-driven systems." },
-  { n: "03", title: "UI / UX Design", desc: "Design systems, motion, prototyping, accessibility." },
-  { n: "04", title: "Cloud & DevOps", desc: "AWS, Vercel, Cloudflare, Docker, CI/CD pipelines." },
-  { n: "05", title: "Data & Analytics", desc: "Pipelines, dashboards, experimentation frameworks." },
-  { n: "06", title: "AI Tooling", desc: "LLM orchestration, RAG, agentic workflows, eval loops." },
-  { n: "07", title: "Business Strategy", desc: "GTM, product-market fit, monetization, brand systems." },
-  { n: "08", title: "Cybersecurity", desc: "Zero-trust patterns, auth, threat modeling." },
+  { title: "Frontend", items: "React, Next.js, TypeScript, Tailwind" },
+  { title: "Backend", items: "Node.js, Go, PostgreSQL, Redis" },
+  { title: "Cloud", items: "AWS, Vercel, Cloudflare, Docker" },
+  { title: "Other", items: "UI/UX design, Photography, Writing" },
 ];
 
 export const PROJECTS = [
   {
     img: project1,
     title: "Lumina OS",
-    desc: "Next-gen operating environment for distributed engineering teams.",
+    desc: "A workspace tool I built for remote teams to stay organized without the clutter of traditional project management apps.",
     tags: ["TypeScript", "AWS"],
   },
   {
     img: project2,
     title: "Vault Protocol",
-    desc: "Zero-knowledge security layer for enterprise asset management.",
+    desc: "Security-first asset management for a fintech startup. Handled auth, encryption, and the dashboard from scratch.",
     tags: ["Rust", "Wasm"],
   },
   {
     img: project3,
     title: "Neural Draft",
-    desc: "AI-powered architectural drafting for urban planning teams.",
+    desc: "Helped an urban planning firm automate their architectural drafting using ML. Easily the most fun project I've done.",
     tags: ["Python", "PyTorch"],
   },
   {
     img: project4,
     title: "Flux Commerce",
-    desc: "Headless commerce engine engineered for ultra-fast performance.",
+    desc: "A headless commerce engine — focused on making checkout feel instant. Sub-second page loads, no compromises.",
     tags: ["Next.js", "Stripe"],
   },
   {
     img: project5,
     title: "Nexus Analytics",
-    desc: "Real-time event tracking system with millisecond latency.",
+    desc: "Real-time event tracking that actually works at scale. Built the pipeline, the dashboard, and the alerting system.",
     tags: ["Go", "Redis"],
   },
   {
     img: project6,
     title: "Aether Home",
-    desc: "IoT orchestration platform for sustainable living spaces.",
+    desc: "IoT platform for smart homes — bridging Zigbee devices with a clean web interface for everyday users.",
     tags: ["Zigbee", "Node.js"],
   },
 ];
@@ -67,26 +63,26 @@ export const EXPERIENCE = [
     role: "Founder & CEO",
     org: "Kafle Digital Labs",
     when: "2022 — Present",
-    desc: "Leading technical strategy and execution for early-stage startups in FinTech and AI.",
+    desc: "Running my own thing — helping early-stage startups in fintech and AI figure out their tech stack and ship their first product.",
     active: true,
   },
   {
     role: "Senior Software Architect",
     org: "Global Tech Solutions",
     when: "2020 — 2022",
-    desc: "Spearheaded migration of legacy monoliths to modern microservices on GCP.",
+    desc: "Led the migration from a monolith to microservices. Lots of late nights, but the system handled 10x the traffic after.",
   },
   {
     role: "Full-Stack Engineer",
     org: "Horizon Studio",
     when: "2018 — 2020",
-    desc: "Shipped product surfaces for international SaaS clients across web and mobile.",
+    desc: "Built product interfaces for SaaS clients across web and mobile. This is where I fell in love with good UI.",
   },
   {
     role: "B.Sc. Computer Science",
     org: "Tribhuvan University",
     when: "2014 — 2018",
-    desc: "Focus on distributed systems, algorithms, and human-computer interaction.",
+    desc: "Studied distributed systems and algorithms. Spent most of my free time building side projects and breaking things.",
   },
 ];
 
@@ -95,39 +91,39 @@ export const TESTIMONIALS = [
     name: "Marcus Thorne",
     role: "CTO, Vector Dynamics",
     quote:
-      "Sagar pairs a rare technical depth with sharp product instinct. He didn't just write code — he helped us define the core value proposition.",
+      "Sagar doesn't just write code — he thinks about the product. He helped us figure out what to build, not just how to build it.",
   },
   {
     name: "Sarah Chen",
     role: "Founder, Horizon AI",
     quote:
-      "Precision is the word that comes to mind. Sagar's approach is methodical, and what we build today will scale for years.",
+      "What I appreciate most is his patience. He takes the time to understand the problem before jumping to solutions.",
   },
   {
     name: "Aarav Singh",
     role: "Head of Product, Northwind",
     quote:
-      "Genuinely the calmest, most thoughtful engineer I've worked with. Ships fast, communicates clearly, raises the bar for everyone around him.",
+      "The calmest engineer I've worked with. Ships fast, communicates clearly, and somehow makes everyone around him better.",
   },
 ];
 
 export const POSTS = [
   {
-    date: "March 12, 2025",
-    cat: "AI Strategy",
-    title: "Scaling Neural Interfaces: Lessons from the Edge",
-    desc: "A deep dive into optimizing model inference latency for real-time human interaction systems.",
+    date: "Mar 2025",
+    cat: "AI",
+    title: "What I learned building with LLMs for 6 months",
+    desc: "The hype is real, but so are the rough edges. Here's what actually worked and what didn't.",
   },
   {
-    date: "Feb 28, 2025",
+    date: "Feb 2025",
     cat: "Product",
-    title: "The Minimalist Founder's Stack",
-    desc: "Why choosing boring technology is the most aggressive growth move you can make this year.",
+    title: "The case for boring technology",
+    desc: "Why choosing the unsexy stack is often the smartest move for early-stage startups.",
   },
   {
-    date: "Jan 14, 2025",
+    date: "Jan 2025",
     cat: "Engineering",
-    title: "Designing for Speed, Not Just Performance",
-    desc: "Perceived latency, optimistic UI, and the architecture decisions that compound over time.",
+    title: "Speed is a feature",
+    desc: "On perceived latency, optimistic UI, and the small decisions that compound into a great user experience.",
   },
 ];

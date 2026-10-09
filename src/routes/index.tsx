@@ -8,24 +8,23 @@ import { Footer } from "@/components/sections/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Nav } from "@/components/sections/Nav";
 import { Projects } from "@/components/sections/Projects";
-import { Skills } from "@/components/sections/Skills";
 import { Testimonials } from "@/components/sections/Testimonials";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/")(({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Sagar Kafle — Builder, Developer, Digital Strategist" },
+      { title: "Sagar Kafle — Developer & Maker" },
       {
         name: "description",
         content:
-          "Personal portfolio of Sagar Kafle — software engineer, entrepreneur, and digital strategist. Selected works, experience, and writing.",
+          "Sagar Kafle — a developer from Nepal who builds digital products, writes code, and takes photos.",
       },
-      { property: "og:title", content: "Sagar Kafle — Builder, Developer, Digital Strategist" },
+      { property: "og:title", content: "Sagar Kafle — Developer & Maker" },
       {
         property: "og:description",
         content:
-          "Personal portfolio of Sagar Kafle — software engineer, entrepreneur, and digital strategist.",
+          "A developer from Nepal who builds digital products, writes code, and takes photos.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -37,13 +36,13 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Sagar Kafle",
-          jobTitle: "Builder, Developer, Digital Strategist",
+          jobTitle: "Software Developer",
           url: "https://sagar-kafle.com.np",
         }),
       },
     ],
   }),
-});
+}));
 
 function Index() {
   return (
@@ -52,7 +51,6 @@ function Index() {
       <main>
         <Hero />
         <About />
-        <Skills />
         <Projects />
         <Experience />
         <Testimonials />
