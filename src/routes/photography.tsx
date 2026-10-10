@@ -11,13 +11,14 @@ export const Route = createFileRoute("/photography")({
       {
         name: "description",
         content:
-          "Landscape and documentary photography by Sagar Kafle across the Scottish Highlands and the Kathmandu Valley, Nepal.",
+          "Landscape and documentary photography by Sagar Kafle across Scotland and Nepal. All photographs are subject to copyright.",
       },
+      { name: "copyright", content: "© Sagar Kafle. All rights reserved." },
       { property: "og:title", content: "Photography & Visual Stories — Sagar Kafle" },
       {
         property: "og:description",
         content:
-          "Moments and visual stories captured through the lens in Scotland and Nepal by Sagar Kafle.",
+          "Moments and visual stories captured through the lens in Scotland and Nepal by Sagar Kafle. All photographs subject to copyright.",
       },
     ],
     links: [{ rel: "canonical", href: "/photography" }],
