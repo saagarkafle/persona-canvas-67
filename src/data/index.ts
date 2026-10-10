@@ -7,6 +7,15 @@ import project6 from "@/assets/project-6.jpg";
 import photoHighlandCow from "@/routes/images/highland_cow.jpg";
 import photoScottishHighland from "@/routes/images/scottish_highland.jpg";
 import photoTemple from "@/routes/images/temple.jpg";
+import photoEdinburghCanal from "@/routes/images/edinburgh_union_canal.jpg";
+import photoRiverClyde from "@/routes/images/river_clyde_aerial.jpg";
+import photoAyrAirshow from "@/routes/images/ayr_airshow_wingwalkers.jpg";
+import photoBoudhanath from "@/routes/images/boudhanath_stupa.jpg";
+import photoDharahara from "@/routes/images/dharahara_tower.jpg";
+import photoPhewaLake from "@/routes/images/phewa_lake_pokhara.jpg";
+import photoHillMonastery from "@/routes/images/nepal_hill_monastery.jpg";
+import photoKushmaBungee from "@/routes/images/kushma_cliff_bungee.jpg";
+import photoCarrickCliffs from "@/routes/images/carrick_coastal_cliffs.jpg";
 
 export const SECTION_LINKS = [
   { href: "#about", label: "About" },
@@ -145,6 +154,7 @@ export interface Photograph {
   id: string;
   title: string;
   location: string;
+  region: "Scotland" | "Nepal" | "UK" | string;
   year: string;
   camera: string;
   image: string;
@@ -160,7 +170,8 @@ export const PHOTOGRAPHS: Photograph[] = [
   {
     id: "highland-cow",
     title: "Highland Coo in Scottish Meadows",
-    location: "Pollok Country Park, Glasgow",
+    location: "Pollok Country Park, Glasgow, Scotland",
+    region: "Scotland",
     year: "2025",
     camera: "ISO 32 • f/3.4 • 1/640s",
     image: photoHighlandCow,
@@ -170,7 +181,7 @@ export const PHOTOGRAPHS: Photograph[] = [
       readTime: "2 min read",
       paragraphs: [
         "Few sights define the Scottish landscape quite like the iconic Highland cattle — with their sweeping horns, shaggy rust-colored coats, and utterly unflappable demeanor in any weather.",
-        "I encountered this gentle giant on an afternoon walk through the meadows. The clouds were shifting fast, dropping soft natural shadows across the green hillside. Framing through a 115mm telephoto lens let me capture the intimacy of the scene without disturbing the animal's quiet rhythm.",
+        "I encountered this gentle giant on an afternoon walk through the meadows of Pollok Park in Glasgow. The clouds were shifting fast, dropping soft natural shadows across the green hillside. Framing through a 115mm telephoto lens let me capture the intimacy of the scene without disturbing the animal's quiet rhythm.",
         "Watching the cow slowly graze against the backdrop of ancient woodland was a grounding reminder of nature’s quiet pace — a welcome antidote to the fast-moving cycles of modern development."
       ],
     },
@@ -179,6 +190,7 @@ export const PHOTOGRAPHS: Photograph[] = [
     id: "scottish-highlands",
     title: "Spring Snow on the Highland Ridgeline",
     location: "West Highlands, Scotland",
+    region: "Scotland",
     year: "2026",
     camera: "ISO 64 • f/2.8 • 1/400s",
     image: photoScottishHighland,
@@ -197,6 +209,7 @@ export const PHOTOGRAPHS: Photograph[] = [
     id: "kathmandu-temple",
     title: "Sacred Pagoda & Wings in Flight",
     location: "Kathmandu Valley, Nepal",
+    region: "Nepal",
     year: "2025",
     camera: "ISO 64 • f/3.4 • 1/550s",
     image: photoTemple,
@@ -208,6 +221,177 @@ export const PHOTOGRAPHS: Photograph[] = [
         "Kathmandu's ancient squares are living open-air sanctuaries of Newari artistry. Every carved wooden strut, weathered terracotta roof tile, and gilded spire (gajur) carries centuries of ancestral craftsmanship, spiritual devotion, and cultural resilience.",
         "I took this shot as the afternoon sun cut through billowing white clouds, illuminating the vibrant green moss lining the multi-tiered eaves. At that exact fraction of a second, a bird took flight overhead, bridging timeless stone and living movement.",
         "Coming from Nepal, these historic temples have always felt like home. In technology, we constantly race towards the next new release; standing here reminds me that the most enduring things in life are crafted with deep care, patience, and timeless intention."
+      ],
+    },
+  },
+  {
+    id: "edinburgh-canal",
+    title: "Autumn Reflections on Union Canal",
+    location: "Union Canal, Edinburgh, Scotland",
+    region: "Scotland",
+    year: "2025",
+    camera: "ISO 12 • f/1.7 • 1/345s",
+    image: photoEdinburghCanal,
+    caption: "The 'All Aboard' canal boat resting calmly along the quiet towpath beneath golden autumn trees and historic stone tenements.",
+    story: {
+      title: "Along the Quiet Waters of Edinburgh",
+      readTime: "2 min read",
+      paragraphs: [
+        "The Union Canal towpath was one of my favourite daily retreats during my Master's at Edinburgh Napier. Stretching from the city centre out towards the Pentland Hills, it offers an escape from urban bustle into slow, mirror-like calm.",
+        "On this brisk November afternoon, the water was as still as glass, capturing the vibrant yellow-and-blue hull of the barge and the golden turning leaves of the overhanging canopy.",
+        "Moments like this reflect the balance Edinburgh provides: world-class academic rigour surrounded by centuries of unhurried history and nature."
+      ],
+    },
+  },
+  {
+    id: "river-clyde-aerial",
+    title: "Descent Over the Clyde",
+    location: "River Clyde, Glasgow, Scotland",
+    region: "Scotland",
+    year: "2025",
+    camera: "ISO 12 • f/1.7 • 1/750s",
+    image: photoRiverClyde,
+    caption: "A freighter navigates the opened swing bridge along the historic River Clyde seen from the airplane window on approach to Glasgow.",
+    story: {
+      title: "Glasgow from the Skies",
+      readTime: "2 min read",
+      paragraphs: [
+        "Descending through Scotland's cloud layers into Glasgow Airport, the aircraft banked gracefully over the winding River Clyde.",
+        "Looking down through the oval window, I spotted a cargo vessel gliding smoothly downriver right as the new swing bridge opened its arms to let it pass.",
+        "The Clyde's shipbuilding heritage defined Scotland's industrial prowess for generations; seeing modern commerce flow through those historic channels from above was unforgettable."
+      ],
+    },
+  },
+  {
+    id: "boudhanath-stupa",
+    title: "The All-Seeing Eyes of Boudhanath",
+    location: "Boudhanath Stupa, Kathmandu, Nepal",
+    region: "Nepal",
+    year: "2025",
+    camera: "ISO 32 • f/3.4 • 1/570s",
+    image: photoBoudhanath,
+    caption: "The compassionate gaze of the Buddha eyes beneath the gilded spire, adorned with colorful wind-blown prayer flags.",
+    story: {
+      title: "A Sanctuary of Tibetan Spirituality",
+      readTime: "2 min read",
+      paragraphs: [
+        "Boudhanath is one of the largest spherical stupas in the world and the spiritual epicentre of Tibetan Buddhism in the Kathmandu Valley. The rhythmic chanting of monks and the spinning of brass prayer wheels give the mandala a hypnotic serenity.",
+        "Looking straight up at the gilded harmika, the painted eyes look out in all four cardinal directions, symbolizing universal awareness and compassion.",
+        "No matter how fast the world outside spins, stepping into the stupa's circular path brings an immediate, settling clarity."
+      ],
+    },
+  },
+  {
+    id: "phewa-lake",
+    title: "Dusk on Phewa Lake",
+    location: "Phewa Lake, Pokhara, Nepal",
+    region: "Nepal",
+    year: "2020",
+    camera: "ISO 50 • f/1.8 • 1/690s",
+    image: photoPhewaLake,
+    caption: "Handcrafted wooden doonga boats anchored along the placid waters of Phewa Lake as dusk settles over the Annapurna foothills.",
+    story: {
+      title: "Stillness by the Lakeside",
+      readTime: "2 min read",
+      paragraphs: [
+        "Pokhara has a serene rhythm unlike anywhere else. In the late afternoon, after the daytime breeze dies down, the waters of Phewa Lake turn completely glassy.",
+        "The brightly painted wooden rowing boats (doongas) rest gently along the shore while the surrounding Himalayan foothills fade into soft twilight mist.",
+        "This frame captures that peaceful pause right between sunset and nightfall, where conversation drops to a murmur and water laps softly against the wooden hulls."
+      ],
+    },
+  },
+  {
+    id: "dharahara-tower",
+    title: "Dharahara Reborn",
+    location: "Dharahara, Kathmandu, Nepal",
+    region: "Nepal",
+    year: "2025",
+    camera: "ISO 40 • f/1.7 • 1/4930s",
+    image: photoDharahara,
+    caption: "The gleaming white tower of Dharahara rising boldly between the bustling traditional alleyways of Kathmandu.",
+    story: {
+      title: "A Monument of Resilience",
+      readTime: "2 min read",
+      paragraphs: [
+        "Dharahara (Bhimsen Tower) holds deep emotional significance for every Nepali. Having witnessed history and tragedy across two centuries, seeing it reconstructed and standing tall again is deeply moving.",
+        "Walking through the narrow street market, the white minaret suddenly reveals itself framed tightly between brick shopfronts and electric wires, soaring into the blue sky.",
+        "It stands as a testament to the resilience of Kathmandu — enduring through seismic shifts while maintaining its cultural identity."
+      ],
+    },
+  },
+  {
+    id: "nepal-hill-monastery",
+    title: "Valley Road to the Hill Monastery",
+    location: "Dhulikhel Valley Hills, Nepal",
+    region: "Nepal",
+    year: "2025",
+    camera: "ISO 40 • f/1.7 • 1/3925s",
+    image: photoHillMonastery,
+    caption: "A winding hill highway cutting through lush terraced greens toward a gilded Buddhist monastery perched high on the ridge.",
+    story: {
+      title: "Into the Hills of Dhulikhel",
+      readTime: "2 min read",
+      paragraphs: [
+        "Leaving the bustle of Kathmandu behind, the road winds up into the lush pine-clad ridges of Dhulikhel and Kavre.",
+        "From this high vantage point through the pines, the road snake bends below while the monastery's golden roof shines proudly against the mountain backdrop.",
+        "The journey itself teaches mindfulness: every bend reveals another tier of terraced fields and distant Himalayan ranges."
+      ],
+    },
+  },
+  {
+    id: "ayr-airshow",
+    title: "Wingwalkers Above the Coast",
+    location: "Ayr Beach Coast, Scotland",
+    region: "Scotland",
+    year: "2026",
+    camera: "ISO 32 • f/3.4 • 1/2435s",
+    image: photoAyrAirshow,
+    caption: "AeroSuperBatics biplanes soaring in formation with daring wingwalkers leaving billowing smoke trails across the Scottish sky.",
+    story: {
+      title: "Acrobatics Over the Firth of Clyde",
+      readTime: "2 min read",
+      paragraphs: [
+        "Attending the International Scottish Airshow along the Ayr seafront offered exhilarating moments of aviation precision.",
+        "These vintage Boeing Stearman biplanes performed synchronized loops and rolls while acrobats stood fearless on the upper wings.",
+        "Shooting at 1/2400s shutter speed froze the performers mid-pose against the clouds, capturing human bravery and mechanical beauty in a single frame."
+      ],
+    },
+  },
+  {
+    id: "kushma-cliff-bungee",
+    title: "The Leap of Faith",
+    location: "The Cliff, Kushma, Nepal",
+    region: "Nepal",
+    year: "2024",
+    camera: "ISO 100 • f/2.8 • 1/1000s",
+    image: photoKushmaBungee,
+    caption: "Suspended in pure freefall 228 meters above the raging Kaligandaki river from the world's second-highest bungee platform.",
+    story: {
+      title: "Conquering the Gorge at The Cliff",
+      readTime: "2 min read",
+      paragraphs: [
+        "Standing on the edge of the cantilever platform at Kushma, 228 meters above the roaring Kaligandaki River gorge, your instincts scream to step back.",
+        "Taking that leap into the open void is an unmatched surge of adrenaline and release. For those few seconds of weightlessness, fear disappears entirely.",
+        "Life and software engineering both require taking bold leaps into the unknown; this jump was a visceral reminder of what lies on the other side of hesitation."
+      ],
+    },
+  },
+  {
+    id: "carrick-cliffs",
+    title: "Cliffs of the Atlantic",
+    location: "Carrick-a-Rede Coast, UK",
+    region: "Scotland & UK",
+    year: "2026",
+    camera: "ISO 50 • f/2.4 • 1/370s",
+    image: photoCarrickCliffs,
+    caption: "Dramatic sea cliffs plunging into emerald Atlantic waters around the rugged headlands of Carrick-a-Rede.",
+    story: {
+      title: "Where Land Meets the Ocean Surge",
+      readTime: "2 min read",
+      paragraphs: [
+        "The jagged northern coastline is a masterclass in elemental power. Giant basalt headlands cut into deep turquoise water, shaped by millennia of relentless ocean swells.",
+        "Looking down along the cliff trail towards the offshore island, the contrast between weathered volcanic rock, bright yellow gorse bushes, and vibrant ocean depths is mesmerizing.",
+        "It's a place where the scale of nature makes everything else feel quiet and small."
       ],
     },
   },
