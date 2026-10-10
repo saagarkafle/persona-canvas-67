@@ -162,7 +162,7 @@ export const PHOTOGRAPHS: Photograph[] = [
     title: "Highland Coo in Scottish Meadows",
     location: "Pollok Country Park, Glasgow",
     year: "2025",
-    camera: "Samsung S25 Ultra • 115mm telephoto • f/3.4 • ISO 32",
+    camera: "ISO 32 • f/3.4 • 1/640s",
     image: photoHighlandCow,
     caption: "A magnificent Scottish Highland cow grazing peacefully in open summer pastures under passing rain clouds.",
     story: {
@@ -180,7 +180,7 @@ export const PHOTOGRAPHS: Photograph[] = [
     title: "Spring Snow on the Highland Ridgeline",
     location: "West Highlands, Scotland",
     year: "2026",
-    camera: "iPhone 16 Pro Max • 120mm telephoto • f/2.8 • ISO 64",
+    camera: "ISO 64 • f/2.8 • 1/400s",
     image: photoScottishHighland,
     caption: "Alpine snow blanketing rugged Scottish peaks, towering over dense evergreen pine forest under breaking cloud cover.",
     story: {
@@ -198,7 +198,7 @@ export const PHOTOGRAPHS: Photograph[] = [
     title: "Sacred Pagoda & Wings in Flight",
     location: "Kathmandu Valley, Nepal",
     year: "2025",
-    camera: "Samsung S25 Ultra • 115mm telephoto • f/3.4 • ISO 64 (Lightroom)",
+    camera: "ISO 64 • f/3.4 • 1/550s",
     image: photoTemple,
     caption: "A solitary bird sweeps across a brilliant azure sky above the moss-lined tiers of a traditional Nepali pagoda temple.",
     story: {
