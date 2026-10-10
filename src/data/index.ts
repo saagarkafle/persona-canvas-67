@@ -4,9 +4,9 @@ import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 import project5 from "@/assets/project-5.jpg";
 import project6 from "@/assets/project-6.jpg";
-import photoHighlands from "@/assets/photo-highlands.jpg";
-import photoEdinburgh from "@/assets/photo-edinburgh.jpg";
-import photoHimalayas from "@/assets/photo-himalayas.jpg";
+import photoHighlandCow from "@/routes/images/highland_cow.jpg";
+import photoScottishHighland from "@/routes/images/scottish_highland.jpg";
+import photoTemple from "@/routes/images/temple.jpg";
 
 export const SECTION_LINKS = [
   { href: "#about", label: "About" },
@@ -158,56 +158,56 @@ export interface Photograph {
 
 export const PHOTOGRAPHS: Photograph[] = [
   {
-    id: "glen-coe",
-    title: "Golden Hour over Glen Coe",
-    location: "Scottish Highlands",
-    year: "2024",
-    camera: "35mm • ISO 100 • f/4.0",
-    image: photoHighlands,
-    caption: "Sunlight piercing through cloud breaks above winding waters in the Scottish Highlands.",
+    id: "highland-cow",
+    title: "Highland Coo in Scottish Meadows",
+    location: "Pollok Country Park, Glasgow",
+    year: "2025",
+    camera: "Samsung S25 Ultra • 115mm telephoto • f/3.4 • ISO 32",
+    image: photoHighlandCow,
+    caption: "A magnificent Scottish Highland cow grazing peacefully in open summer pastures under passing rain clouds.",
     story: {
-      title: "Chasing the Breaking Light in Glen Coe",
+      title: "The Quiet Majesty of the Highland Coo",
       readTime: "2 min read",
       paragraphs: [
-        "We drove into the valley under hours of heavy, relentless Scottish mist. Just as the afternoon was fading, the low northern sun fractured through the cloud cover, casting an amber glow down the slopes into the loch.",
-        "Photography teaches patience the same way software architecture does: you can prepare your composition and tools in advance, but you have to stay alert and ready for the exact fleeting moment when the components align.",
-        "This frame captured that rare five-minute window before the twilight chill pulled the valley back into shadow."
+        "Few sights define the Scottish landscape quite like the iconic Highland cattle — with their sweeping horns, shaggy rust-colored coats, and utterly unflappable demeanor in any weather.",
+        "I encountered this gentle giant on an afternoon walk through the meadows. The clouds were shifting fast, dropping soft natural shadows across the green hillside. Framing through a 115mm telephoto lens let me capture the intimacy of the scene without disturbing the animal's quiet rhythm.",
+        "Watching the cow slowly graze against the backdrop of ancient woodland was a grounding reminder of nature’s quiet pace — a welcome antidote to the fast-moving cycles of modern development."
       ],
     },
   },
   {
-    id: "edinburgh-old-town",
-    title: "Cobblestone Reflections",
-    location: "Victoria Street, Edinburgh",
-    year: "2024",
-    camera: "28mm • ISO 800 • f/2.0",
-    image: photoEdinburgh,
-    caption: "A wet dusk reflecting golden streetlights along the historic curves of the Old Town.",
+    id: "scottish-highlands",
+    title: "Spring Snow on the Highland Ridgeline",
+    location: "West Highlands, Scotland",
+    year: "2026",
+    camera: "iPhone 16 Pro Max • 120mm telephoto • f/2.8 • ISO 64",
+    image: photoScottishHighland,
+    caption: "Alpine snow blanketing rugged Scottish peaks, towering over dense evergreen pine forest under breaking cloud cover.",
     story: {
-      title: "Evenings in the City of Stone",
+      title: "Where Winter Lingers on the Summit",
       readTime: "2 min read",
       paragraphs: [
-        "Edinburgh after an evening rain has an intimacy that dry daylight never reveals. The sandstone buildings drink in the streetlamp glow, and the wet cobblestones turn into mirrors reflecting passersby with umbrellas.",
-        "Walking these streets during my Master's studies was often my way to step away from code and research papers, clearing my head by observing the rhythm of everyday life.",
-        "There's something deeply grounding about watching centuries-old architecture stand unhurried amid the rush of modern life."
+        "Travelling north through the Scottish Highlands in early spring brings one of the country's most dramatic visual contrasts: deep, evergreen pine forests blanketing the lower glen, rising steeply into rugged mountain ridges still dusted in snow.",
+        "The mountain peak seemed to play hide-and-seek behind heavy Scottish clouds, appearing and vanishing as the wind swept across the valley. Catching the peak framed squarely above the tree canopy highlighted the sheer scale and raw atmosphere of the terrain.",
+        "Throughout my Master's studies at Edinburgh Napier, these Highland escapes became essential journeys to reset, find perspective, and marvel at the wild, untamed beauty of northern Scotland."
       ],
     },
   },
   {
-    id: "himalayan-ridge",
-    title: "Prayer Flags in Alpine Silence",
-    location: "High Himalaya, Nepal",
-    year: "2023",
-    camera: "50mm • ISO 100 • f/5.6",
-    image: photoHimalayas,
-    caption: "Wind-whipped prayer flags sending quiet blessings into the thin morning air across snowbound summits.",
+    id: "kathmandu-temple",
+    title: "Sacred Pagoda & Wings in Flight",
+    location: "Kathmandu Valley, Nepal",
+    year: "2025",
+    camera: "Samsung S25 Ultra • 115mm telephoto • f/3.4 • ISO 64 (Lightroom)",
+    image: photoTemple,
+    caption: "A solitary bird sweeps across a brilliant azure sky above the moss-lined tiers of a traditional Nepali pagoda temple.",
     story: {
-      title: "Wind, Sky, and High Ridges",
+      title: "Centuries of Clay, Wood, and Devotion",
       readTime: "3 min read",
       paragraphs: [
-        "Standing at 5,000 meters just after sunrise, the silence is unlike anything found at lower altitudes. The only sound is the rhythmic flutter of prayer flags carrying goodwill on the high mountain wind.",
-        "The light here feels unmediated — crisp, sharp, and revealing every crevasse in the rock. Having grown up connected to Nepal, returning to these trails always reconnects me with what truly matters: humility, scale, and quiet persistence.",
-        "No lens ever quite captures the vastness of these summits, but this shot is as close as I could get to remembering that still morning."
+        "Kathmandu's ancient squares are living open-air sanctuaries of Newari artistry. Every carved wooden strut, weathered terracotta roof tile, and gilded spire (gajur) carries centuries of ancestral craftsmanship, spiritual devotion, and cultural resilience.",
+        "I took this shot as the afternoon sun cut through billowing white clouds, illuminating the vibrant green moss lining the multi-tiered eaves. At that exact fraction of a second, a bird took flight overhead, bridging timeless stone and living movement.",
+        "Coming from Nepal, these historic temples have always felt like home. In technology, we constantly race towards the next new release; standing here reminds me that the most enduring things in life are crafted with deep care, patience, and timeless intention."
       ],
     },
   },

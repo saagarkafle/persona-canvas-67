@@ -48,14 +48,14 @@ export function Photography() {
               className="group flex flex-col rounded-2xl border border-border bg-card overflow-hidden cursor-pointer transition-all duration-300 hover:border-accent hover:shadow-lg hover:-translate-y-1"
             >
               {/* Image Frame */}
-              <div className="relative aspect-[4/3] overflow-hidden bg-secondary/40">
+              <div className="relative aspect-[4/5] overflow-hidden bg-secondary/40">
                 <img
                   src={photo.image}
                   alt={photo.title}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 
                 {/* Floating location badge */}
                 <div className="absolute top-3 left-3 rounded-full bg-background/85 backdrop-blur-md px-3 py-1 text-[11px] font-medium text-foreground shadow-sm">
@@ -122,11 +122,11 @@ export function Photography() {
 
             {/* Photo Column */}
             <div className="md:w-1/2 bg-black/90 flex flex-col justify-between overflow-hidden relative">
-              <div className="h-full min-h-[260px] md:min-h-full flex items-center justify-center">
+              <div className="h-full min-h-[260px] md:min-h-full flex items-center justify-center p-2">
                 <img
                   src={activePhoto.image}
                   alt={activePhoto.title}
-                  className="max-h-[50vh] md:max-h-[85vh] w-full object-cover md:object-contain"
+                  className="max-h-[50vh] md:max-h-[85vh] w-full object-contain"
                 />
               </div>
 
